@@ -1,2 +1,4 @@
 # DiY-Continuous-Flow-Analyzer-for-Spectrophotometric-
-A DIY 3D-printed spectrophotometer that slurps water, shines fancy RGB lights, and tells you how much ammonium is in it—perfect for keeping fish happy. Powered by Arduino &amp; Python, using Nessler reagent magic for real-time analysis. Cheap, portable, and mildly over-engineered.
+This project presents a low-cost, portable spectrophotometer system designed to allow real-time monitoring of spectrophotometric active chemical compound. The device integrates a 3D-printed microfluidic flow cell, RGB LED light source, AS7341 spectral sensor, peristaltic pump, and solenoid valve, all controlled via Arduino and Python. 
+
+
