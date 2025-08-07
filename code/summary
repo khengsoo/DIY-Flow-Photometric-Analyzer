@@ -1,0 +1,4 @@
+#Content of Scripts
+1. CFA.ino - Arduino script for controlling the RGB LED, solenoid valve, and AS7341 data acquisition.
+2. data_acquisition.py - Python script for real-time reading and visualization of spectral intensity.
+3. data_extraction.py - Python script for processing time-based absorbance data and extracting peak values.
