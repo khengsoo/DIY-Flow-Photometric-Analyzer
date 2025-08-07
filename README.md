@@ -5,7 +5,7 @@ It is designed to support maker education in chemistry, particularly in undergra
 
 ## Educational Use
 This project is ideal for undergraduate analytical chemistry courses with a focus on project-based learning and maker-centered education. Students can:
-- Build and customize a functional spectrophotometer
+- Build and customize a functional continuous flow analyser-based spectrophotometer
 - Understand the technical components of analytical instrumentation
 - Collect, process, and analyze spectrophotometric data
 - Integrate Arduino programming into chemical analysis workflows
