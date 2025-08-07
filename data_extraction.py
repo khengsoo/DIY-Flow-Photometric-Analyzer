@@ -22,21 +22,21 @@ concentration_ranges = pd.read_csv("concentration_ranges.csv")  # Expected colum
 peaks, properties = find_peaks(
     absorbance,
     height=0.001,
-    prominence=0.075,
+    prominence=0.01,
     distance=3
 )
 
 # Step 3: Filter out bubble peaks using derivative method
 derivative = np.gradient(absorbance)
 filtered_peaks = []
-decay_threshold = -0.1  # Adjust based on data
+decay_threshold = -0.5  # Adjust based on data
 
 for p in peaks:
     if p + 1 < len(derivative) and derivative[p + 1] >= decay_threshold:
         filtered_peaks.append(p)
 
 # Step 4: Compute peak height relative to baseline
-baseline_window = 8  # Number of points before peak to determine baseline
+baseline_window = 5  # Number of points before peak to determine baseline
 relative_peak_heights = {}
 
 for peak in filtered_peaks:
@@ -54,16 +54,13 @@ for peak in filtered_peaks:
             classified_peaks[row['concentration']].append(relative_peak_heights[peak])
             break
 
-# Step 6: Compute mean absorbance for each concentration using IQR method
-mean_absorbance = {}
+# Step 6: Find the maximum filtered peak for each concentration
+max_absorbance = {}
 for conc, values in classified_peaks.items():
     if values:
-        q1, q3 = np.percentile(values, [25, 75])
-        iqr = q3 - q1
-        lower_bound = q1 - 1.5 * iqr
-        upper_bound = q3 + 1.5 * iqr
-        filtered_values = [val for val in values if lower_bound <= val <= upper_bound]
-        mean_absorbance[conc] = np.mean(filtered_values) if filtered_values else np.nan
+        max_absorbance[conc] = max(values)
+    else:
+        max_absorbance[conc] = np.nan
 
 # Step 7: Visualize classified peaks before saving
 plt.figure(figsize=(10, 5))
@@ -85,8 +82,8 @@ plt.show()
 # Step 8: Save processed data to CSV
 decision = input("Confirm saving processed data? (yes/no): ")
 if decision.lower() == 'yes':
-    output_data = pd.DataFrame(list(mean_absorbance.items()), columns=['Concentration', 'Mean Absorbance'])
-    output_data.to_csv("processed_absorbance_data.csv", index=False)
+    output_data = pd.DataFrame(list(max_absorbance.items()), columns=['Concentration', 'Max Absorbance'])
+    output_data.to_csv("processed_absorbance_data_maximum.csv", index=False)
     print("Processed data saved successfully.")
 else:
     print("Data saving aborted.")
