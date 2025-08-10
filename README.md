@@ -1,4 +1,4 @@
-# DiY-Continuous-Flow-Analyzer-for-Spectrophotometric-
+# DIY-Flow-Photometric-Analyzer
 This project presents a low-cost, portable spectrophotometer system designed to allow real-time monitoring of spectrophotometrically active chemical compounds. The device integrates a 3D-printed microfluidic flow cell, RGB LED light source, AS7341 spectral sensor, peristaltic pump, and solenoid valve, all controlled via Arduino and Python. 
 
 It is designed to support maker education in biology and chemistry. It enables students to build and customize their own photometric based detection ssystem for continuous flow analyser, encouraging hands-on exploration of instrumentation, sensor integration, and data analysis. Through this project, students gain experience with Arduino-based systems, chemical data collection, and 3D printing techniques, fostering practical skills in data processing and instrument design.
