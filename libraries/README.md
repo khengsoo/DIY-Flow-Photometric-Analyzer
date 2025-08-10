@@ -18,5 +18,10 @@ For more details, see the [AS7341 datasheet](https://www.dfrobot.com/product-221
 3. matplotlib
 
 To install the required Python libraries, open your terminal or command prompt and run:
-'pip install pandas pyserial matplotlib
+
+`pip install pandas pyserial matplotlib`
+
+If you are using Jupyter Notebook, you can install them directly inside a notebook cell by running:
+
+`!pip install pandas pyserial matplotlib`
 
