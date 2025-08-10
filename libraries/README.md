@@ -5,7 +5,9 @@ This project uses a combination of Arduino and Python libraries to control hardw
 1. DFRobot_AS7341
 
 Communicates with the AS7341 spectral sensor to read multi-channel absorbance data.
+
 Link to library: [DFRobot_AS7341 Library](https://github.com/DFRobot/DFRobot_AS7341)
+
 For more details, see the [AS7341 datasheet](https://www.dfrobot.com/product-2211.html).
 
 # Python Library
