@@ -9,7 +9,7 @@ Communicates with the AS7341 spectral sensor to read multi-channel absorbance da
 
 Link to library: [DFRobot_AS7341 Library](https://github.com/DFRobot/DFRobot_AS7341)
 
-For more details, see the [AS7341 datasheet](https://wiki.dfrobot.com/AS7341_Visible_Light_Sensor_SKU_SEN0365).
+For more details, see the [AS7341 datasheet](https://dfimg.dfrobot.com/nobody/wiki/10be9b0c8cce74a8b649e4d911bc4f41.pdf).
 
 
 ## Python Library
