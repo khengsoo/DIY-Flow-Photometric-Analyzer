@@ -18,7 +18,7 @@ I0 = None  # Baseline intensity (initial intensity)
 absorbance_data = []
 
 # Open a CSV file to save the data
-with open('red_no_valve_sat_2_45_buff_purple_blue.csv', 'w', newline='') as csvfile:
+with open('absorbance_data.csv', 'w', newline='') as csvfile:
     csvwriter = csv.writer(csvfile)
     csvwriter.writerow(["Absorbance"])  # Write the header
 
