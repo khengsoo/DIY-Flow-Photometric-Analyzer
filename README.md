@@ -24,3 +24,7 @@ By engaging in this hands-on project, students develop a deeper understanding of
 4. AS7341 11-channel visible light sensor
 5. Flow Cell Cuvette: Quartz flow-through cuvette
 6. Kingbright 5 mm through-hole common cathode RGB LED
+
+## Publication link 
+https://link.springer.com/protocol/10.1007/978-1-0716-5320-3_14
+
